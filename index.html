@@ -3,18 +3,88 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css" />
     <title>Revolut Bento Box</title>
   </head>
   <body>
-    <section class="main container">
-      <div>
-        <h4>Préstamos de hasta 30.000€ </h4>
-        <picture>
-          <source media="(min-width: 1040px)"
-        </picture>
-      </div>
-    </section>
+    <body>
+      <section class="main-container">
+        <div class="loans-block">
+          <p class="text">Préstamos de hasta 30.000€</p>
+        </div>
+    
+        <div class="revolut-card">
+          <h2 class="logo">Revolut</h2>
+          <picture class="icon contactless">
+            <source media="(min-width: 1040px)" srcset="assets/desktop/contactless-payment-1.svg">
+            <source media="(min-width: 768px)" srcset="assets/tablet/contactless-payment-1.svg">
+            <source media="(min-width: 360px)" srcset="assets/mobile/contactless-payment-1.svg">
+            <img src="/assets/mobile/contactless-payment-1.svg" alt="Icono de pago sin contacto">
+          </picture>
+        </div>
+    
+        <div class="inversion-card">
+          <p class="text">Invierte con un 0% de comisión</p>
+          <picture class="icon hand-coin">
+            <source media="(min-width: 1040px)" srcset="assets/desktop/hand-coin-line.svg">
+            <source media="(min-width: 768px)" srcset="assets/tablet/hand-coin-line.svg">
+            <source media="(min-width: 360px)" srcset="assets/mobile/hand-coin-line.svg">
+            <img src="/assets/mobile/hand-coin-line.svg" alt="Icono de mano con dinero">
+          </picture>
+        </div>
+    
+        <div class="userUsing-box">
+          <div class="divText">
+            <p>ÚNETE A LOS MÁS DE</p>
+            <span class="highlight">50 MILLONES</span>
+            <p>QUE UTILIZAN REVOLUT</p>
+            <div class="icon hand-coin"></div>
+            <div class="dollar-sign"></div>
+          </div>
+        </div>
+    
+        <div class="money-grow-box">
+          <p class="text">Haz crecer tu dinero con un</p>
+          <p class="text highlight-MoneyGrow">3,04 % TAE</p>
+        </div>
+    
+        <div class="security-box">
+          <picture class="icon security">
+            <source media="(min-width: 1040px)" srcset="assets/desktop/secure-payment-line.svg">
+            <source media="(min-width: 768px)" srcset="assets/tablet/secure-payment-line.svg">
+            <source media="(min-width: 360px)" srcset="assets/mobile/secure-payment-line.svg">
+            <img src="/assets/mobile/secure-payment-line.svg" alt="Icono de un escudo">
+          </picture>
+          <p class="text">Seguridad Financiera con Revolut Secure</p>
+        </div>
+    
+        <div class="reader-box">
+          <p>REVOLUT READER PARA EMPRESAS</p>
+          <picture>
+            <source media="(min-width: 1040px)" srcset="assets/desktop/reader.png">
+            <source media="(min-width: 768px)" srcset="assets/tablet/reader.png">
+            <source media="(min-width: 360px)" srcset="assets/mobile/reader.png">
+            <img src="/assets/mobile/reader.png" alt="Lector de tarjeta">
+          </picture>
+        </div>
+    
+        <div class="parentalControl-box">
+          <p class="text">Cuenta <18 con control parental</p>
+          <picture class="icon people">
+            <source media="(min-width: 1040px)" srcset="assets/desktop/people-icon.svg">
+            <source media="(min-width: 768px)" srcset="assets/tablet/people-icon.svg">
+            <source media="(min-width: 360px)" srcset="assets/mobile/people-icon.svg">
+            <img src="assets/mobile/people-icon.svg" alt="Control parental">
+          </picture>
+        </div>
+    
+        <div class="chooseAPlan-box">
+          <p>Elige el plan que mejor se adpata a ti</p>
+        </div>
+      </section>
     <script src="./js/scripts.js"></script>
   </body>
 </html>

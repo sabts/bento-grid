@@ -20,6 +20,220 @@ nav ul{
 }
 body{
     margin: 0;
-    font-family: sans-serif;
+    font-family:'Montserrat' ,sans-serif;
+    font-weight: 700;
+    font-style: italic;
     background-color: #1B1A1A;
+    color: #FFF;
+    padding: 20px;
 }
+
+.main-container{
+    display: grid;
+    grid-template-columns: 100%;
+    padding-inline: 2rem;
+    gap: 1rem;
+}
+
+/*Imagen de la tarjeta*/
+.loans-block{
+    display: flex;
+    height: 73px;
+    padding: 16px;
+    align-items: center;
+    justify-content: center;
+    background-image: url(/assets/mobile/cards-mobile.png);
+    border-radius: 8px;
+}
+
+@media (min-width: 768px) {
+    .loans-block {
+        width: 315px;
+        height: 160px;
+        padding: 32px;
+        align-items: center;
+      background-image: url('assets/tablet/cards-tablet.png');
+    }
+  }
+  
+
+  @media (min-width: 1040px) {
+    .loans-block {
+        width: 389px;
+        height: 176px;
+        padding: 40px;
+      background-image: url('assets/desktop/cards-desktop.png');
+    }
+  }
+
+  /*Texto*/
+.text{
+    font-size: 12px;
+    margin: 0;
+    grid-column: 1 / 3 ; 
+}
+
+ /*Tarjeta de Revolut*/
+.revolut-card{
+    position: relative;
+    height: 163px;
+    padding: 8px;
+    background-image: linear-gradient(66deg, #EC116D 15.11%, rgba(89, 92, 199, 0.80) 58.58%, #13257B 85.62%);
+    border-radius: 8px;
+  }
+.logo{
+    font-size: 20px;
+}
+.contactless{
+    position: relative;
+    top: -15px;
+    left: 190px;
+}
+
+ /*Inversiones*/
+.inversion-card{
+    display: flex;
+    height: 73px;
+    padding: 16px;
+    align-items: center;
+    border-radius: 8px;
+    background: #459;
+    gap: 16px;
+
+}
+ /*Uneta los que usan Revolut*/
+.userUsing-box{
+    height: 252px;
+    border-radius: 8px;
+    background: #7B6A9C
+}
+
+.divText{
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    font-size: 1rem;
+}
+
+.highlight{
+    display: flex;
+    padding: 8px 16px;
+    align-items: center;
+    border-radius: 16px;
+    background: #1D0C14
+}
+.dollar-sign{
+    position: relative;
+    background-image: url(/assets/mobile/dollar-small.png);
+    background-repeat: no-repeat;
+    width: 46px;
+    height: 46px;
+    left: 95px;
+    top: 35px;
+}
+
+.dollar-sign::before{
+    content: "";
+    position: absolute;
+    display: block;      
+    background-image: url(/assets/mobile/dollar-big.png);
+    background-repeat: no-repeat;
+    width: 193px;
+    height: 193px;
+    top: -36px;
+    left: 0px;
+}
+
+.dollar-sign::after{
+    content: "";
+    position: absolute;
+    display: block;      
+    background-image: url(/assets/mobile/dollar-medium.png);
+    background-repeat: no-repeat;
+    width: 193px;
+    height: 193px;
+    top: -39px;
+    left: -100px;
+}
+
+.money-grow-box{
+    display: grid;
+    padding: 1rem;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    height: 73px;
+    border-radius: 8px;
+    background: #DF849C
+}
+.highlight-MoneyGrow{
+    grid-column: 1 / 2 ;
+    align-self: start; 
+    grid-row: 2 / 3;  
+    padding: 4px 8px;
+    border-radius: 8px;
+    background: #1D0C14;
+}
+.security-box{
+    display: flex;
+    height: 73px;
+    gap: 16px;
+    padding: 16px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background: #46377A;
+}
+.reader-box{
+    display: flex;
+    font-size: 16px;
+    padding: 24px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    background: #1D0C14;
+}
+.parentalControl-box{
+    display: flex;
+    height: 73px;
+    padding: 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    border-radius: 8px;
+    background: #CA3685;
+}
+.icon{
+    display: flex;
+}
+
+ /*Elegir plan*/
+.chooseAPlan-box{
+    display: flex;
+    padding: 16px 24px;
+    font-size: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image:url(/assets/mobile/airport-mobile.png)
+}
+
+@media (min-width: 768px) {
+    .loans-block {
+        width: 315px;
+        height: 160px;
+        padding: 32px;
+        align-items: center;
+        background-image: url(/assets/tablet/airport-tablet.png)
+    }
+  }
+  
+
+  @media (min-width: 1040px) {
+    .loans-block {
+        width: 389px;
+        height: 176px;
+        padding: 40px;
+      background-image: url(/assets/desktop/airport-desktop.png);
+    }
+  }
