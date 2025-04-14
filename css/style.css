@@ -27,6 +27,14 @@ body{
     color: #FFF;
     padding: 20px;
 }
+.box{
+    border-radius: 8px;
+}
+@media (min-width: 768px) {
+    .box{
+        border-radius: 16px;
+    }
+}
 
 .main-container{
     display: grid;
@@ -34,6 +42,21 @@ body{
     padding-inline: 2rem;
     gap: 1rem;
 }
+@media (min-width: 768px) {
+    .main-container {
+        padding: 4.25rem;
+        grid-template-columns: repeat(2, 315px);
+        grid-template-rows: repeat(5, 160px);
+    }
+  }
+  @media (min-width: 1040px) {
+    .main-container {
+        padding: 4.25rem;
+        grid-template-columns: repeat(4,388px);
+        grid-template-rows: repeat(5, 176px);
+    }
+  }
+
 
 /*Imagen de la tarjeta*/
 .loans-block{
@@ -43,34 +66,47 @@ body{
     align-items: center;
     justify-content: center;
     background-image: url(/assets/mobile/cards-mobile.png);
-    border-radius: 8px;
 }
 
 @media (min-width: 768px) {
     .loans-block {
+        grid-row: 1/2;
+        grid-column: 2/3;
         width: 315px;
         height: 160px;
         padding: 32px;
         align-items: center;
-      background-image: url('assets/tablet/cards-tablet.png');
+        background-image: url(/assets/tablet/cards-tablet.png);
     }
   }
-  
 
   @media (min-width: 1040px) {
     .loans-block {
+        grid-row: 1;
+        grid-column: 3/4;
+        text-align: center;
         width: 389px;
         height: 176px;
         padding: 40px;
-      background-image: url('assets/desktop/cards-desktop.png');
+      background-image: url(/assets/desktop/cards-desktop.png);
     }
   }
 
   /*Texto*/
 .text{
-    font-size: 12px;
+    font-size: 0.75rem;
     margin: 0;
     grid-column: 1 / 3 ; 
+}
+@media (min-width: 768px) {
+    .text{
+        font-size: 1.25rem;
+    }
+}
+@media (min-width: 1040px) {
+    .text{
+        font-size: 1.4375rem;
+    }
 }
 
  /*Tarjeta de Revolut*/
@@ -79,32 +115,79 @@ body{
     height: 163px;
     padding: 8px;
     background-image: linear-gradient(66deg, #EC116D 15.11%, rgba(89, 92, 199, 0.80) 58.58%, #13257B 85.62%);
-    border-radius: 8px;
   }
 .logo{
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 .contactless{
     position: relative;
     top: -15px;
     left: 190px;
 }
-
+@media (min-width: 768px) {
+    .revolut-card{
+        grid-row: 2/3;
+        grid-column: 1/2;
+        width: 650px;
+        height: 339px;
+        padding: 20px 36px;
+    }
+    .logo{
+        font-size: 3rem;
+    }
+    .contactless{
+        top: -30px;
+        left: 500px;
+    }
+}
+@media (min-width: 1010px) {
+    .revolut-card{
+        grid-row: 2/3;
+        grid-column: 2/4;
+        width: 796px;
+        height: 568px;
+        padding: 20px 36px;
+    }
+    .logo{
+        font-size: 5.5rem;
+    }
+    .contactless{
+        top: -10px;
+        left: 560px;
+    }
+}
  /*Inversiones*/
 .inversion-card{
     display: flex;
     height: 73px;
     padding: 16px;
     align-items: center;
-    border-radius: 8px;
     background: #459;
     gap: 16px;
-
+    justify-content: center;
 }
+@media (min-width: 768px) {
+    .inversion-card {
+        grid-row: 1/2;
+        grid-column: 1/2;
+        width: 315px;
+        height: 160px;
+        padding: 32px;
+    }
+  }
+  @media (min-width: 1040px) {
+    .inversion-card {
+        grid-row: 1/3;
+        grid-column: 2/3;
+        width: 389px;
+        height: 176px;
+        padding: 40px;
+    }
+  }
+
  /*Uneta los que usan Revolut*/
 .userUsing-box{
     height: 252px;
-    border-radius: 8px;
     background: #7B6A9C
 }
 
@@ -155,14 +238,90 @@ body{
     top: -39px;
     left: -100px;
 }
+@media (min-width: 768px) {
+    .userUsing-box {
+        width: 315px;
+        height: 339px;
+        grid-column: 1/2;
+        grid-row: 4/5;
+    }
+    .divText{
+        font-size: 23px;
+        margin: 0;
+    }
+    .dollar-sign{
+        background-image: url(/assets/tablet/dollar-small.png);
+        background-repeat: no-repeat;
+        top: 28px;
+    }
+    .dollar-sign::before{
+        content: "";
+        position: absolute;
+        display: block;      
+        background-image: url(/assets/tablet/dollar-big.png);
+        background-repeat: no-repeat;
+    }
+    
+    .dollar-sign::after{
+        content: "";
+        position: absolute;
+        display: block;   
+        top: -50px;   
+        background-image: url(/assets/tablet/dollar-medium.png);
+        background-repeat: no-repeat;
+  }
+}
+  @media (min-width: 1040px) {
+    .userUsing-box {
+        width: 388px;
+        height: 568px;
+        grid-column: 1;
+        grid-row: 1/3;
+    }
+    .divText{
+        height: 270px;
+        font-size: 37px;
+        margin: 0;
+    }
+    .dollar-sign{
+        background-image: url(/assets/desktop/dollar-small.png);
+        background-repeat: no-repeat;
+        height: 94px;
+        width: 94px;
+        top: 165px;
+        left: 135px;
+    }
+    .dollar-sign::before{
+        content: "";
+        position: absolute;
+        display: block;      
+        width: 307px;
+        height: 307px;
+        left: 20px;
+        top: -80px;
+        background-image: url(/assets/desktop/dollar-big.png);
+        background-repeat: no-repeat;
+    }
+}
+    .dollar-sign::after{
+        content: "";
+        position: absolute;
+        display: block;   
+        width: 151px;
+        height: 151px;
+        top: -60px;   
+        left: -140px;
+        background-image: url(/assets/desktop/dollar-medium.png);
+        background-repeat: no-repeat;
+  }
 
+  /*Haz crecer tu dinero*/
 .money-grow-box{
     display: grid;
     padding: 1rem;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     height: 73px;
-    border-radius: 8px;
     background: #DF849C
 }
 .highlight-MoneyGrow{
@@ -170,9 +329,41 @@ body{
     align-self: start; 
     grid-row: 2 / 3;  
     padding: 4px 8px;
-    border-radius: 8px;
+    font-size: 0.625rem;
     background: #1D0C14;
 }
+@media (min-width: 768px) {
+    .money-grow-box {
+        grid-row: 4;
+        grid-column: 2 / 3 ;
+        width: 315px;
+        height: 160px;
+        gap: 8px;
+    }
+    .highlight-MoneyGrow{
+        grid-column:1/ 2;
+        border-radius: 1rem;
+        padding: 8px 16px;
+        font-size: 18px;
+    }
+}
+@media (min-width: 1040px) {
+    .money-grow-box {
+        grid-row: 4;
+        grid-column: 4 ;
+        width: 389px;
+        height: 176px;
+        padding: 32px 40px;
+    }
+    .highlight-MoneyGrow{
+        grid-column:1/ 2;
+        border-radius: 1rem;
+        padding: 8px 16px;
+        font-size: 18px;
+    }
+}
+
+ /*Seguridad*/   
 .security-box{
     display: flex;
     height: 73px;
@@ -183,6 +374,24 @@ body{
     border-radius: 8px;
     background: #46377A;
 }
+@media (min-width: 768px) {
+    .security-box{
+        grid-row: 5;
+        grid-column: 2 / 3 ;
+        height: 100%;
+        gap: 24px;
+    }
+}
+@media (min-width: 1040px) {
+    .security-box{
+        grid-row: 5;
+        grid-column: 4 ;
+        height: 100%;
+        gap: 24px;
+    }
+}
+
+/*Revolut Reader */
 .reader-box{
     display: flex;
     font-size: 16px;
@@ -190,9 +399,29 @@ body{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    border-radius: 8px;
     background: #1D0C14;
 }
+@media (min-width: 768px) {
+    .reader-box{
+        grid-row: 6;
+        grid-column: 2;
+        height: 339px;
+        padding: 32px 40px;
+        font-size: 24px;
+    }
+}
+@media (min-width: 1040px) {
+    .reader-box{
+        grid-row: 1;
+        grid-column: 4/5;
+        width: 388px;
+        height: 568px;
+        padding: 40px;
+        font-size: 40px;;
+    }
+  }
+
+/*Menores de 18*/
 .parentalControl-box{
     display: flex;
     height: 73px;
@@ -200,12 +429,38 @@ body{
     justify-content: center;
     align-items: center;
     gap: 16px;
-    border-radius: 8px;
     background: #CA3685;
+    font-size: 12px;
 }
+
 .icon{
     display: flex;
 }
+
+@media (min-width: 768px) {
+    .parentalControl-box{
+        grid-row: 6/7;
+        width: 315px;
+        height: 339px;
+        padding: 40px;
+        gap: 4px;
+        flex-direction:column-reverse;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        font-size: 32px;
+    }
+}
+@media (min-width: 1040px) {
+    .parentalControl-box {
+        grid-row: 4;
+        grid-column: 1;
+        width: 388px;
+        height: 372px;
+        padding: 40px;
+        font-size: 40px;
+    }
+  }
+
 
  /*Elegir plan*/
 .chooseAPlan-box{
@@ -217,23 +472,36 @@ body{
     align-items: center;
     background-image:url(/assets/mobile/airport-mobile.png)
 }
-
+.text-priority{
+    display: none; 
+}
 @media (min-width: 768px) {
-    .loans-block {
-        width: 315px;
+    .chooseAPlan-box{
+        font-size: 20px;
+        grid-column: 1;
+        grid-row: 8;
+        width: 650px;
         height: 160px;
-        padding: 32px;
+        text-align: center;
+        line-height: normal;
         align-items: center;
         background-image: url(/assets/tablet/airport-tablet.png)
     }
+    .text-priority{
+        display: block;
+        font-size: 24px;
+    }
   }
-  
-
   @media (min-width: 1040px) {
-    .loans-block {
-        width: 389px;
+    .chooseAPlan-box{
+        grid-column: 2;
+        grid-row: 5;
+        width: 795px;
         height: 176px;
-        padding: 40px;
+        padding: 20px;
       background-image: url(/assets/desktop/airport-desktop.png);
+    }
+    .text-priority{
+        font-size: 40px;
     }
   }
