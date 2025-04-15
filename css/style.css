@@ -207,37 +207,20 @@ body{
 }
 .dollar-sign{
     position: relative;
-    background-image: url(/assets/mobile/dollar-small.png);
-    background-repeat: no-repeat;
-    width: 46px;
-    height: 46px;
-    left: 95px;
-    top: 35px;
+    left: 110px;
+    top: 10px;
+}
+.dollar-sign-medium{
+    position: relative;     
+    top: -70px;
+    left: 10px;
+}
+.dollar-sign-big{
+    position: relative;   
+    top: -158px;
+    left: 118px;
 }
 
-.dollar-sign::before{
-    content: "";
-    position: absolute;
-    display: block;      
-    background-image: url(/assets/mobile/dollar-big.png);
-    background-repeat: no-repeat;
-    width: 193px;
-    height: 193px;
-    top: -36px;
-    left: 0px;
-}
-
-.dollar-sign::after{
-    content: "";
-    position: absolute;
-    display: block;      
-    background-image: url(/assets/mobile/dollar-medium.png);
-    background-repeat: no-repeat;
-    width: 193px;
-    height: 193px;
-    top: -39px;
-    left: -100px;
-}
 @media (min-width: 768px) {
     .userUsing-box {
         width: 315px;
@@ -249,27 +232,11 @@ body{
         font-size: 23px;
         margin: 0;
     }
-    .dollar-sign{
-        background-image: url(/assets/tablet/dollar-small.png);
-        background-repeat: no-repeat;
-        top: 28px;
+    .dollar-sign-container{
+        position: relative;
+        top: -1000px;
     }
-    .dollar-sign::before{
-        content: "";
-        position: absolute;
-        display: block;      
-        background-image: url(/assets/tablet/dollar-big.png);
-        background-repeat: no-repeat;
-    }
-    
-    .dollar-sign::after{
-        content: "";
-        position: absolute;
-        display: block;   
-        top: -50px;   
-        background-image: url(/assets/tablet/dollar-medium.png);
-        background-repeat: no-repeat;
-  }
+  
 }
   @media (min-width: 1040px) {
     .userUsing-box {
@@ -283,37 +250,22 @@ body{
         font-size: 37px;
         margin: 0;
     }
-    .dollar-sign{
-        background-image: url(/assets/desktop/dollar-small.png);
-        background-repeat: no-repeat;
-        height: 94px;
-        width: 94px;
-        top: 165px;
-        left: 135px;
+    .dollar-sign-container{
+        position: relative;
+        top: 6px;
+        left: 37px;
     }
-    .dollar-sign::before{
-        content: "";
-        position: absolute;
-        display: block;      
-        width: 307px;
-        height: 307px;
-        left: 20px;
-        top: -80px;
-        background-image: url(/assets/desktop/dollar-big.png);
-        background-repeat: no-repeat;
+    .dollar-sign{
+        position: relative;
+        left: 100px;
+        top: 170px;
+    }
+    .dollar-sign-medium{
+        position: relative;     
+        top: 10px;
+        left: -40px;
     }
 }
-    .dollar-sign::after{
-        content: "";
-        position: absolute;
-        display: block;   
-        width: 151px;
-        height: 151px;
-        top: -60px;   
-        left: -140px;
-        background-image: url(/assets/desktop/dollar-medium.png);
-        background-repeat: no-repeat;
-  }
 
   /*Haz crecer tu dinero*/
 .money-grow-box{
@@ -330,6 +282,7 @@ body{
     grid-row: 2 / 3;  
     padding: 4px 8px;
     font-size: 0.625rem;
+    border-radius: 8px;
     background: #1D0C14;
 }
 @media (min-width: 768px) {
@@ -435,6 +388,7 @@ body{
 
 .icon{
     display: flex;
+    width: 100px;
 }
 
 @media (min-width: 768px) {
@@ -470,7 +424,8 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image:url(/assets/mobile/airport-mobile.png)
+    background-image:url(/assets/mobile/airport-mobile.png);
+    background-size: cover;
 }
 .text-priority{
     display: none; 
